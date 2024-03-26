@@ -1,0 +1,110 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(224,147,84,1) 0%, rgba(249,205,43,1));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 95%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px 0px;
+}
+
+.card .titulo {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    color: rgb(135, 130, 130);
+}
+
+.card .campo {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .campo .campo-nome {
+    font-weight: 500;
+    font-size: 1.3em;
+    color: rgb(135, 130, 130);
+}
+
+
+.card .campo [type="text"],
+.card .campo [type="number"] {
+    max-width: 75%;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    text-indent: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.card .campo [type="number"]::-webkit-inner-spin-button  {
+    appearance: none;
+}
+
+
+.card .botao {
+    cursor: pointer;
+    background:rgba(249,205,43,1);
+    max-width: 320px;
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+@media(max-width: 450px) {
+    .card  {
+        height: auto;
+        padding: 20px 0px;
+    }
+
+    .card .campo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px 0px;
+    }
+    
+    
+.card .campo [type="text"],
+.card .campo [type="number"] {
+    max-width: 100%;
+}
+}
+
+@media(max-width: 320px) {
+    
+.card .titulo {
+    font-size: 1.6em;
+}
+}
